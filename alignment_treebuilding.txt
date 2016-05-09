@@ -1,0 +1,13 @@
+Commands:
+Estimating alignments:
+PASTA: python run_pasta.py -d protein -i <input_sequences>
+UPP: run_upp.py -A 10 -m amino –a <pasta_alignment> -t <pasta_tree> -s $file -x 4 -o <output>
+
+Estimating GTR matrix and alpha parameter for codon positions and estimating gene trees:
+RAxML: raxmlHPC-PTHREADS-SSE3 -s <input_sequences> -n <output_name> -m GTRGAMMA -p <random_seed>
+ 
+Estimating ML tree from partitioned alignment
+RAxML: raxmlHPC-PTHREADS-SSE3 -T 8 -q <input_partition_file> -s <input_partition_alignment> -p <random_seed> -m GTRGAMMA
+
+Estimating coalescence tree from gene trees
+Astral: java -jar astral.4.9.9.jar -i <gene_tree> -o <output_name>
