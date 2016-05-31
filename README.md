@@ -20,4 +20,4 @@ need:  List of library names
 usage:  sh Loop_Exonerate_pipeline.sh
 
 ## 2.  Tree building 
-## code used to build large phylogenomic trees wiht ASTRAL 
+## code used to build large phylogenomic trees with ASTRAL 
